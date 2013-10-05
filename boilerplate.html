@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
-	<link rel="stylesheet" href="themes/style/web-2.0.css">
+	<link rel="stylesheet" href="themes/style/neon.css">
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
@@ -32,15 +32,81 @@
 <!-- Begin slides. Just make elements with a class of slide. -->
 
 <section class="slide">
-	<h1>Slide</h1>
+	<h1>All's fair in love and encryption</h1>
+	<p>Getting to the bottom of the ECC controversy</p>
 </section>
 
 <section class="slide">
-	<h1>Content</h1>
+	<h2>Disclaimer</h2>
+	<p>Any opinions presented in this talk by the presenter do not in any way represent an official endorsement by Freeside Technology Spaces, Inc., nor is intended to reflect the views of Freeside and its membership.</p>
+	
+	<p>This presentation is intended for informative and entertainment purposes only. While every effort has been made to provide accurate information, these should not be used to base or replace expert advice. Please consult with respected mathematicians, cryptologists, computer engineers, and lawyers on your own accord for advice regarding the topics at hand.</p>
+
+	<p>This presentation does not represent any endorsement from any government agency, nor does it condone any action intended to bring harm to the public trust or the public at large. Freeside does not encourage or promote any illegal activity.</p>
 </section>
 
 <section class="slide">
-	<h1>Here</h1>
+	<h1>Why we encrypt</h1>
+	<p><em>Any individual who is not concerned about his freedom commits an act of moral and spiritual suicide. - Dr. Martin Luther King Jr.</em></p>
+</section>
+
+<section class="slide">
+	<h2>A decade of psuedo-trust</h2>
+	<ul>
+		<li>We rely on strong Pseudo-Random Number Generators (pRNGs) to provision keys for encryption</li>
+		<li>pRNG sources (/dev/random, memory entropy) are considerably unreliable and predictable when compared to true entropy sources</li>
+		<li>Theoretically, we could provide possible sequences for the exhaustive task of brute-forcing keys forged via pRNG</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h1>Enter Elliptical Curve Cryptography</h1>
+</section>
+
+<section class="slide">
+	<h2>Winning the arms race on pRNG</h2>
+	<ul>
+		<p>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>What happens now?</h2>
+	<ul>
+		<li>NIST has a huge PR problem on its hands</li>
+		<ul>
+			<li>NIST has re-opened the RFCs for additonal feedback on ECC algorithms</li>
+			<li>...but they're not accepting anything due to the #shutdown #bullshit #yolo</li>
+		</ul>
+		<li>RSA Security, a large provider of security solutions, has advised companies to abandon DRBG in its own software</li>
+		<li>The press is having a field day with this, as they struggle to keep the NSA in the public consciousness</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>What should I do?</h2>
+	<ul>
+		<li>Use ECC algorithms that are public and have been subject to intense peer review</li>
+		<li>DSCG 142 A is the official algorithm adopted by OpenSSL, GPG, and the OpenBSD Crypto stack</li>
+		<li>The OpenBSD Crypto mailing list is a good source to see the inner workings of algorithm peer reviews</li>
+		<li>Call your congressman and talk to him about your "real feelings" about this information surveilance state</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Questions?</h2>
+	<ul>
+		<li>Get these slides: <a href="http://github.com/ghostfreeman/ecc-slides">http://github.com/ghostfreeman/ecc-slides</a></li>
+		<li>Get these notes (PDF): <a href="http://db.tt/&">http://db.tt/&</a>
+		<li>Follow me</li>
+			<ul>
+				<li>Twitter: @thrillgore</li>
+				<li>Facebook: /cameron.kilgore</li>
+				<li>G+: gplus.to/thrillgore</li>
+				<li>Or ask me for my public key :)</li>
+			</ul>
+		</li>
+	</ul>
 </section>
 
 <!-- End slides. -->
